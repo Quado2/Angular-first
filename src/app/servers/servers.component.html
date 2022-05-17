@@ -1,5 +1,8 @@
 <app-server></app-server>
 
+<input type="text" 
+class="form-control" 
+(input)="onInputChange($event)" />
 <button
   [disabled]="disableButton"
   class="btn btn-primary"
@@ -7,4 +10,5 @@
 >
   Start Server
 </button>
-<p> {{serverCreateStatus}} </p>
+<p>{{ newServerName }}</p>
+<p>{{ serverCreateStatus }}</p>

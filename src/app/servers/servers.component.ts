@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   disableButton = false;
   serverCreateStatus = 'Server is not created';
-
+  newServerName = "Kedu";
   constructor() {
     setTimeout(() => {
       this.disableButton = true;
@@ -19,6 +19,10 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreateStatus = 'server is created';
+  }
+
+  onInputChange(event:Event){
+    this.newServerName = (<HTMLInputElement>event.target).value
   }
 
   ngOnInit(): void {}
