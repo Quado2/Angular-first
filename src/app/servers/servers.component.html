@@ -1,8 +1,9 @@
 <app-server></app-server>
+<!-- One way data binding -->
+<!-- <input type="text" class="form-control" (input)="onInputChange($event)" /> -->
+<input type="text" [(ngModel)] = "newServerName">
 
-<input type="text" 
-class="form-control" 
-(input)="onInputChange($event)" />
+
 <button
   [disabled]="disableButton"
   class="btn btn-primary"
