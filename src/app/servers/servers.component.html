@@ -5,11 +5,11 @@
 
 
 <button
-  [disabled]="disableButton"
+  [disabled]="!disableButton"
   class="btn btn-primary"
   (click)="onCreateServer()"
 >
   Start Server
 </button>
-<p>{{ newServerName }}</p>
+
 <p>{{ serverCreateStatus }}</p>
