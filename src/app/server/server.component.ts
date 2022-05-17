@@ -5,5 +5,10 @@ import { Component } from "@angular/core";
   templateUrl:"./server.component.html"
 })
 export class ServerComponent {
+  serverName = "Quado Server";
+  serverId = "23j2e"
 
+  getServerName(){
+    return this.serverName
+  }
 }
