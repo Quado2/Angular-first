@@ -1,15 +1,26 @@
 <app-server></app-server>
 <!-- One way data binding -->
 <!-- <input type="text" class="form-control" (input)="onInputChange($event)" /> -->
-<input type="text" [(ngModel)] = "newServerName">
 
-
-<button
-  [disabled]="!disableButton"
-  class="btn btn-primary"
-  (click)="onCreateServer()"
->
-  Start Server
-</button>
-
-<p>{{ serverCreateStatus }}</p>
+<div class="container">
+  <div class="column">
+    <hr>
+    <label>Name</label> <br>
+    <input type="text" [(ngModel)]="newServerName" />
+    <br>
+    <button
+      [disabled]="!disableButton"
+      class="btn btn-primary"
+      (click)="onCreateServer()"
+    >
+      Start Server
+    </button>
+    
+    <p *ngIf="showServer; else noServer" >The new server created is {{newServerName}} </p>
+    <ng-template #noServer>
+      <p >
+        Server is not created
+      </p>
+    </ng-template>
+  </div>
+</div>

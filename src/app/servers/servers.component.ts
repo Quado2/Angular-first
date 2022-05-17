@@ -11,6 +11,7 @@ export class ServersComponent implements OnInit {
   disableButton = false;
   serverCreateStatus = 'Server is not created';
   newServerName = "Kedu";
+  showServer= false;
   constructor() {
     setTimeout(() => {
       this.disableButton = true;
@@ -18,11 +19,12 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
-    this.serverCreateStatus = this.newServerName+' server is created';
+  this.showServer = !this.showServer;
   }
 
   onInputChange(event:Event){
     this.newServerName = (<HTMLInputElement>event.target).value
+
   }
 
   ngOnInit(): void {}
