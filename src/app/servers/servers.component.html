@@ -1,3 +1,10 @@
 <app-server></app-server>
 
-<button [disabled]="disableButton" class="btn btn-primary">Start Server</button>
+<button
+  [disabled]="disableButton"
+  class="btn btn-primary"
+  (click)="onCreateServer()"
+>
+  Start Server
+</button>
+<p> {{serverCreateStatus}} </p>

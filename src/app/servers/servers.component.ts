@@ -1,22 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
- // selector: '.app-servers',
+  // selector: '.app-servers',
   //selector: '[app-servers]',
   selector: 'app-servers',
-  templateUrl: "./servers.component.html",
-  styleUrls: ['./servers.component.scss']
+  templateUrl: './servers.component.html',
+  styleUrls: ['./servers.component.scss'],
 })
 export class ServersComponent implements OnInit {
-
   disableButton = false;
-  constructor() { 
-    setTimeout(()=> {
+  serverCreateStatus = 'Server is not created';
+
+  constructor() {
+    setTimeout(() => {
       this.disableButton = true;
-    },2000)
+    }, 2000);
   }
 
-  ngOnInit(): void {
+  onCreateServer() {
+    this.serverCreateStatus = 'server is created';
   }
 
+  ngOnInit(): void {}
 }
