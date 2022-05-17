@@ -1,5 +1,5 @@
-<app-server></app-server>
-<app-server></app-server>
+
+
 <!-- One way data binding -->
 <!-- <input type="text" class="form-control" (input)="onInputChange($event)" /> -->
 
@@ -23,5 +23,7 @@
         Server is not created
       </p>
     </ng-template>
+
+    <app-server *ngFor="let server of servers" ></app-server>
   </div>
 </div>

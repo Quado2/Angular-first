@@ -1,1 +1,7 @@
-<h4 [ngStyle]="{background: getColor()}" >Hurray !!, Our first server - {{getServerName()}} with ID - {{serverId}} is {{serverStatus}}</h4>
+<h4
+  [ngStyle]="{ background: getColor() }"
+  [ngClass]="{ pad: serverStatus === 'online' }"
+>
+  Hurray !!, Our first server - {{ getServerName() }} with ID -
+  {{ serverId }} is {{ serverStatus }}
+</h4>
